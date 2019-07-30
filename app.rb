@@ -10,8 +10,9 @@ get '/square/:number' do
   "#{params[:number].to_i ** 2}"
 end
 
-get '/say/:number/:phrase' do 
-  #{
+    get '/say/:number/:phrase' do
+    "#{Array.new(params[:number].to_i, params[:phrase]).join(", ")}"
+  end
 
 
 end
