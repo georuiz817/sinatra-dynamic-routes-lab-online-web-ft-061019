@@ -18,9 +18,22 @@ get '/say/:word1/:word2/:word3/:word4/:word5' do
   "#{params.values.join(" ")}."
 end
 
-get ':operation/:number1/:number2' do 
-"#{params[:number1].to_i + params[:number2].to_1"
+  get '/:operation/:number1/:number2' do
+    
+    operation, num1, num2 = params.values
+    num1 = num1.to_i 
+    num2 = num2.to_i
 
-end
+    case operation
+    when "add"
+      "#{num1 + num2}"
+    when "subtract"
+      "#{num1 - num2}"
+    when "multiply"
+      "#{num1 * num2}"
+    when "divide"
+      "#{num1 / num2}"  
+    end
+  end
 
 end
