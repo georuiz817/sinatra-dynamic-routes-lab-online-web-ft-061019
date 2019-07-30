@@ -17,4 +17,8 @@ get '/say/:number/:phrase' do
 get '/say/:word1/:word2/:word3/:word4/:word5' do 
   "#{params.values.join(" ")}."
 end
+
+get ':operation/:number1/:number2' do 
+"#{params[:number1].to_i + params[:number2].to_1"
+end
 end
