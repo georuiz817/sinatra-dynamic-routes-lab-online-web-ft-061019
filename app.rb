@@ -14,6 +14,6 @@ get '/say/:number/:phrase' do
     "#{Array.new(params[:number].to_i, params[:phrase]).join(", ")}"
   end
 
-get '/:operation/:number1/:number2'
+get '/say/
 
 end
